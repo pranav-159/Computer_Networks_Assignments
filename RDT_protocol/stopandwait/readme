@@ -1,0 +1,6 @@
+Run the following commands on stop and wait directory
+1) sudo mn (In bash shell)
+2)xterm h1 h2 (In mininet shell)
+3)sudo tc qdisc add dev h2-eth0 root netem rate 10Mbit limit 100 delay 5ms loss 5% (both in h1 and h2 xterm at first lauch with change in h2-eth0 to h1-eth0 for h1)
+4)python3 CS20BTECH11018_recieverStopWait.py in h2 xterm
+5)python3 CS20BTECH11018_senderStopWait.py {image file path} {timeout} in h1 xterm
